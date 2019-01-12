@@ -29,4 +29,4 @@ const friends = [
     ],
   },
 ];
-console.log(friends);
+module.exports = friends;
