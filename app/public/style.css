@@ -1,0 +1,17 @@
+
+.jumbotron {
+  background-color: #3b5998;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  margin-top: 2rem;
+}
+
+button {
+  margin-top: 5rem;
+  margin-left: 5rem;
+}
