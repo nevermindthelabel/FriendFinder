@@ -7,10 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
         crossorigin="anonymous" />
-    <!-- <link rel="stylesheet" href="normalize.css" /> -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Survey</title>
 </head>
 
@@ -35,8 +36,8 @@
             </form>
             <hr />
             <h3>Question 1</h3>
-            <h4>Your mind is always running</h4>
-            <div class="card" style="width: 15rem">
+            <h4>Family comes before work.</h4>
+            <div class="card1" style="width: 15rem">
                 <select class="custom-select">
                     <option selected>Choose a number below</option>
                     <option value="1">1 (least like me)</option>
@@ -47,8 +48,8 @@
                 </select>
             </div>
             <h3>Question 2</h3>
-            <h4>Your mind is never running</h4>
-            <div class="card" style="width: 15rem">
+            <h4>You're always thinking of new ideas.</h4>
+            <div class="card2" style="width: 15rem">
                 <select class="custom-select">
                     <option selected>Choose a number below</option>
                     <option value="1">1 (least like me)</option>
@@ -59,8 +60,8 @@
                 </select>
             </div>
             <h3>Question 3</h3>
-            <h4>Your mind is always running</h4>
-            <div class="card" style="width: 15rem">
+            <h4>Regarding work, you have to love what you do.</h4>
+            <div class="card3" style="width: 15rem">
                 <select class="custom-select">
                     <option selected>Choose a number below</option>
                     <option value="1">1 (least like me)</option>
@@ -71,8 +72,8 @@
                 </select>
             </div>
             <h3>Question 4</h3>
-            <h4>Your mind is always running</h4>
-            <div class="card" style="width: 15rem">
+            <h4>You love to challenge yourself.</h4>
+            <div class="card4" style="width: 15rem">
                 <select class="custom-select">
                     <option selected>Choose a number below</option>
                     <option value="1">1 (least like me)</option>
@@ -83,8 +84,8 @@
                 </select>
             </div>
             <h3>Question 5</h3>
-            <h4>Your mind is always running</h4>
-            <div class="card" style="width: 15rem">
+            <h4>JavaScript is awesome.</h4>
+            <div class="card5" style="width: 15rem">
                 <select class="custom-select">
                     <option selected>Choose a number below</option>
                     <option value="1">1 (least like me)</option>
@@ -95,8 +96,8 @@
                 </select>
             </div>
             <h3>Question 6</h3>
-            <h4>Your mind is always running</h4>
-            <div class="card" style="width: 15rem">
+            <h4>People should think of how blessed they are every day.</h4>
+            <div class="card6" style="width: 15rem">
                 <select class="custom-select">
                     <option selected>Choose a number below</option>
                     <option value="1">1 (least like me)</option>
@@ -107,8 +108,8 @@
                 </select>
             </div>
             <h3>Question 7</h3>
-            <h4>Your mind is always running</h4>
-            <div class="card" style="width: 15rem">
+            <h4>The glass is half full.</h4>
+            <div class="card7" style="width: 15rem">
                 <select class="custom-select">
                     <option selected>Choose a number below</option>
                     <option value="1">1 (least like me)</option>
@@ -119,8 +120,8 @@
                 </select>
             </div>
             <h3>Question 8</h3>
-            <h4>Your mind is always running</h4>
-            <div class="card" style="width: 15rem">
+            <h4>It's important to have things in life you are passionate about.</h4>
+            <div class="card8" style="width: 15rem">
                 <select class="custom-select">
                     <option selected>Choose a number below</option>
                     <option value="1">1 (least like me)</option>
@@ -131,8 +132,8 @@
                 </select>
             </div>
             <h3>Question 9</h3>
-            <h4>Your mind is always running</h4>
-            <div class="card" style="width: 15rem">
+            <h4>Time is more important than money.</h4>
+            <div class="card9" style="width: 15rem">
                 <select class="custom-select">
                     <option selected>Choose a number below</option>
                     <option value="1">1 (least like me)</option>
@@ -143,8 +144,8 @@
                 </select>
             </div>
             <h3>Question 10</h3>
-            <h4>Your mind is always running</h4>
-            <div class="card" style="width: 15rem">
+            <h4>What other people think about you is important to you.</h4>
+            <div class="card10" style="width: 15rem">
                 <select class="custom-select">
                     <option selected>Choose a number below</option>
                     <option value="1">1 (least like me)</option>
@@ -154,15 +155,44 @@
                     <option value="5">5 (most like me)</option>
                 </select>
             </div>
+            <br />
+            <hr />
+            <button class="btn btn-lg btn-primary" type="submit" id="submit">Submit</button>
+
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <!-- <h4 class="modal-title">Modal Header</h4> -->
+                        </div>
+                        <div class="modal-body">
+                            <p>Your closest match is...</p>
+                        </div>
+                        <!-- <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div> -->
+                    </div>
+
+                </div>
+            </div>
 
 
     </div>
-
-
-
+    <div class="footer">
+        <p class="text-danger text-center">web development</p>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script src="app/data/friends.js"></script>
+    <script src="logic.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
