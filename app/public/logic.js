@@ -1,4 +1,3 @@
-// const modalLogic = require('../routing/apiRoutes')
 
 $(document).ready(() => {
 
@@ -35,7 +34,10 @@ $(document).ready(() => {
     }
 
     $.post(`${url}/api/friends`, newFriend)
-      .then(() => {
+      .then((data) => {
+        $('#myModal').modal('toggle');
+        $('.modal-body').prepend(`<h4>Your match is ${data.name}</h4>`);
+        $('#dynamicImg').attr('src', data.photo);
       })
 
     $('#userName').val('');
@@ -51,9 +53,5 @@ $(document).ready(() => {
     $('.custom-select').prop('selectedIndex', 0)
     $('.custom-select').prop('selectedIndex', 0)
 
-    $('#myModal').modal()
-    $('#myModal').attr('src', 'https://photos.google.com/photo/AF1QipMF_yX-FJOZbNCX1TJNkVO5-HWOFrGhem3SH6KK')
-
   })
 })
-// module.exports = modal;
