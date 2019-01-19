@@ -1,7 +1,7 @@
 const friends = [
   {
     name: 'Matt',
-    photo: 'https://awkwardfamilyphotos.com/the-food-coma/',
+    photo: 'https://awkwardfamilyphotos.com/totally-tubular/',
     scores: [
       5,
       3,
