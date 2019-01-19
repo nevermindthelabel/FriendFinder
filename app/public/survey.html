@@ -160,22 +160,18 @@
             <button class="btn btn-lg btn-primary" type="submit" id="submit">Submit</button>
 
             <!-- Modal -->
-            <div id="myModal" class="modal fade" role="dialog">
-                <div class="modal-dialog">
+            <div id="myModal" class="modal fade modal-lg" role="dialog">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
 
                     <!-- Modal content-->
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <!-- <h4 class="modal-title">Modal Header</h4> -->
+                            <h4 class="modal-title"></h4>
                         </div>
                         <div class="modal-body">
-                            <p>Your closest match is...</p>
                             <img class="img-responsive" style=" margin:0 auto;" id="dynamicImg" src="" alt="bestFriend">
                         </div>
-                        <!-- <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div> -->
                     </div>
 
                 </div>
@@ -184,79 +180,12 @@
 
     </div>
     <div class="footer">
-        <p class="text-danger text-center">web development</p>
+        <p class="text-danger text-center">FriendFinder</p>
     </div>
-
-
-    <script>
-
-        // const friendsApi = require('../routing/apiRoutes')
-        $(document).ready(() => {
-
-            $('#submit').click(() => {
-                const userName = $('#userName').val().trim();
-                const userPicture = $('#userPicture').val().trim();
-                const answerToFirstQuestion = ($('.card1').find(":selected").val());
-                const answerToSecondQuestion = ($('.card2').find(":selected").val());
-                const answerToThirdQuestion = ($('.card3').find(":selected").val());
-                const answerToFourthQuestion = ($('.card4').find(":selected").val());
-                const answerToFifthQuestion = ($('.card5').find(":selected").val());
-                const answerToSixthQuestion = ($('.card6').find(":selected").val());
-                const answerToSeventhQuestion = ($('.card7').find(":selected").val());
-                const answerToEighthQuestion = ($('.card8').find(":selected").val());
-                const answerToNinthQuestion = ($('.card9').find(":selected").val());
-                const answerToTenthQuestion = ($('.card10').find(":selected").val());
-                const url = window.location.origin;
-
-                const newFriend = {
-                    name: userName,
-                    photo: userPicture,
-                    scores: [
-                        answerToFirstQuestion,
-                        answerToSecondQuestion,
-                        answerToThirdQuestion,
-                        answerToFourthQuestion,
-                        answerToFifthQuestion,
-                        answerToSixthQuestion,
-                        answerToSeventhQuestion,
-                        answerToEighthQuestion,
-                        answerToNinthQuestion,
-                        answerToTenthQuestion
-                    ]
-                }
-
-                $.post(`${url}/api/friends`, newFriend)
-                    .then(() => {
-
-
-                    })
-
-                $('#userName').val('');
-                $('#userPicture').val('');
-                $('.custom-select').prop('selectedIndex', 0)
-                $('.custom-select').prop('selectedIndex', 0)
-                $('.custom-select').prop('selectedIndex', 0)
-                $('.custom-select').prop('selectedIndex', 0)
-                $('.custom-select').prop('selectedIndex', 0)
-                $('.custom-select').prop('selectedIndex', 0)
-                $('.custom-select').prop('selectedIndex', 0)
-                $('.custom-select').prop('selectedIndex', 0)
-                $('.custom-select').prop('selectedIndex', 0)
-                $('.custom-select').prop('selectedIndex', 0)
-
-                $('#myModal').modal('toggle')
-                $('#dynamicImg').attr('src', 'https://unsplash.com/photos/2xEQDxB0ss4')
-
-            })
-        })
-
-
-    </script>
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!-- <script src="logic.js"></script> -->
+    <script src="logic.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
